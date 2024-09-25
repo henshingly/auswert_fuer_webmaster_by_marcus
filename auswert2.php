@@ -252,15 +252,15 @@ $jokerkurz = array();       // Beinhaltet Punkte für Joker
 
 for ($i = $anfang; $i <= count($config)-1; $i++) {
   // Ligen aus config übergeben
-  Array_push($ligenkurz, trim($config[$i]));
+  array_push($ligenkurz, trim($config[$i]));
 
   // Anzahl getippter Spiele
   $sg = str_replace("TP", "SG", trim($config[$i]));
-  Array_push($anzgetipptkurz, $sg);  //-- kürzel = 'SG'.$i
+  array_push($anzgetipptkurz, $sg);  //-- kürzel = 'SG'.$i
 
   // Jokerpunkte
   $jok = str_replace("TP", "P", trim($config[$i]));
-  Array_push($jokerkurz, $jok);  //-- joker = 'P6'.$i
+  array_push($jokerkurz, $jok);  //-- joker = 'P6'.$i
 }
 
 $zligen = count($ligenkurz);  // Zähler der gewählten Ligen
@@ -268,7 +268,7 @@ $zligen = count($ligenkurz);  // Zähler der gewählten Ligen
 // Überprüfen dass mind. eine Liga ausgewählt wurde
 if ($zligen > 0) {
   $auswert = array();              // ausgefiltertes Array
-  $goal = Array(array(),array());  // zweidimensionales Array anlegen
+  $goal = array(array(),array());  // zweidimensionales Array anlegen
 
   $anzgoal = -1;
 
